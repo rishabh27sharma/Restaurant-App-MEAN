@@ -1,0 +1,21 @@
+.card {
+    margin-top: 15px;
+    border: 1px solid blueviolet;
+    width: 550px;
+    padding: 45px;
+    position: absolute;
+    top: 20%;
+    left: 30%;
+    box-shadow: 0 15px 20px rgba(0, 0, 0, 0.2);
+}
+
+#login-page{
+    width: 100vw;
+    height: 100vh;
+    background: url('../../images/restaurent.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+

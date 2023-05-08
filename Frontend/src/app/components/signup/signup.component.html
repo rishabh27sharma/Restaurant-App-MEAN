@@ -1,0 +1,44 @@
+<div class="row" id="login-page">
+    <div class="col-md-6">
+        <div class="card">
+            <div class="text-center">
+                <h1>Restaurant SignUp</h1>
+                <h6>Get Membership</h6>
+                <hr>
+            </div>
+            <form [formGroup]="signupForm" (ngSubmit)="signUp()">
+                <div class="mb-3">
+                    <label for="exampleInput1" class="form-label">Name</label>
+                    <input type="text" formControlName="name" class="form-control" id="exampleInput1" placeholder="Enter Name" [ngClass]="{'is-invalid': submitted && signupForm.controls['name']['errors']}">
+                    <div *ngIf="submitted && signupForm.controls['name']['errors']" class="invalid-feedback">
+                      <div *ngIf="signupForm.controls['name']['errors']['required']">Name is required!</div>
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label">Email address</label>
+                    <input type="email" formControlName="email" class="form-control" id="exampleInputEmail1" placeholder="Enter Email" [ngClass]="{'is-invalid': submitted && signupForm.controls['email']['errors']}">
+                    <div *ngIf="submitted && signupForm.controls['email']['errors']" class="invalid-feedback">
+                      <div *ngIf="signupForm.controls['email']['errors']['required']">Email is required!</div>
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <label for="exampleInput2" class="form-label">Mobile No.</label>
+                    <input type="text" formControlName="mobile" class="form-control" id="exampleInput2" placeholder="Enter Mobile" [ngClass]="{'is-invalid': submitted && signupForm.controls['mobile']['errors']}">
+                    <div *ngIf="submitted && signupForm.controls['mobile']['errors']" class="invalid-feedback">
+                      <div *ngIf="signupForm.controls['mobile']['errors']['required']">Mobile is required!</div>
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <label for="exampleInputPassword1" class="form-label">Password</label>
+                    <input type="password" formControlName="password" class="form-control" id="exampleInputPassword1" placeholder="Enter Password" [ngClass]="{'is-invalid': submitted && signupForm.controls['password']['errors']}">
+                    <div *ngIf="submitted && signupForm.controls['password']['errors']" class="invalid-feedback">
+                      <div *ngIf="signupForm.controls['password']['errors']['required']">Password is required!</div>
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-primary">Sign Up</button>
+            </form>
+            <br />
+            <a routerLink='/login'>Already Member? Login here!</a>
+        </div>
+    </div>
+</div>

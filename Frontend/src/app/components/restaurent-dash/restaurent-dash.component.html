@@ -1,0 +1,103 @@
+<!-- NavBar  -->
+<nav class="navbar navbar-light">
+    <div class="container-fluid">
+        <h2 style="font-weight: 500;"><i class="fa-brands fa-studiovinari"></i> Restaurant<span>App</span></h2>
+        <div class="d-flex">
+            <button type="button" class="btn btn-warning" style="margin-right: 20px;"><i class="fa-sharp fa-solid fa-user"></i> {{loggedInUser}}</button>
+            <button type="button" (click)="clickAddResto()" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal">Add Restaurant</button>
+            <button routerLink="/login" class="btn btn-danger mx-3" (click)="logOutToaster()"><i class="fa-solid fa-right-from-bracket"></i> Log Out</button>
+        </div>
+    </div>
+</nav>
+
+<!-- Jumbotron -->
+<div class="Jumbotron">
+    <div class="container-fluid mt-5">
+        <h3 class="fw-bold">Restaurant Records Management</h3>
+    </div>
+</div>
+
+<!-- Filter Search -->
+<div class="container">
+  <div class="form-group search">
+    <input
+      type="text"
+      class="form-control"
+      placeholder="Search Restaurent"
+      [(ngModel)]="filterTerm"
+    />
+  </div>
+
+<!-- Table -->
+<table class="table mt-4">
+    <thead>
+        <tr>
+            <th scope="col">Restaurant ID</th>
+            <th scope="col">Name</th>
+            <th scope="col">Email</th>
+            <th scope="col">Mobile</th>
+            <th scope="col">Address</th>
+            <th scope="col">Service</th>
+            <th scope="col">Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let data of restaurentData | filter: filterTerm | paginate: { itemsPerPage: 5, currentPage: page, totalItems: count}" >
+            <td>{{data._id}}</td>
+            <td>{{data.name}}</td>
+            <td>{{data.email}}</td>
+            <td>{{data.mobile}}</td>
+            <td>{{data.address}}</td>
+            <td>{{data.services}}</td>
+            <td>
+                <button type="button" (click)="onEdit(data)" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal" class="btn btn-info"><i class="fa-solid fa-pen-to-square"></i> Edit</button>&nbsp;
+                <button (click)="deleteRecord(data)" class="btn btn-danger"><i class="fa-solid fa-trash"></i> Delete</button>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+  <pagination-controls previousLabel="Prev" nextLabel="Next" (pageChange)="page = $event"></pagination-controls>
+</div>
+
+<!-- Button trigger modal -->
+<!-- Modal -->
+ <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Restaurent Form</h1>
+          <button type="button" class="btn-close" id="btnClose" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <form [formGroup]="formValue">
+             <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">Name</label>
+                <input type="text" formControlName="name" class="form-control" id="exampleFormControlInput1" placeholder="Restaurent Name" required>
+              </div>
+              <div class="mb-3">
+                <label for="exampleFormControlInput2" class="form-label">Email</label>
+                <input type="email" formControlName="email" class="form-control" id="exampleFormControlInput2" placeholder="Restaurent Email" required>
+              </div>
+              <div class="mb-3">
+                <label for="exampleFormControlInput3" class="form-label">Mobile</label>
+                <input type="text" formControlName="mobile" class="form-control" id="exampleFormControlInput3" placeholder="Restaurent Mobile" required>
+              </div>
+              <div class="mb-3">
+                <label for="exampleFormControlInput4" class="form-label">Address</label>
+                <input type="text" formControlName="address" class="form-control" id="exampleFormControlInput4" placeholder="Restaurent Address" required>
+              </div>
+              <div class="mb-3">
+                <label for="exampleFormControlInput5" class="form-label">Services</label>
+                <input type="text" formControlName="services" class="form-control" id="exampleFormControlInput5" placeholder="Restaurent Services" required>
+              </div>
+            </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-warning" data-bs-dismiss="modal">Clear</button>
+          <button type="button" *ngIf="showAdd" (click)="addResto()" class="btn btn-primary">Add Details</button>
+          <button type="button" *ngIf="showUpdate" (click)="updateResto()" class="btn btn-success">Update Details</button>
+        </div>
+      </div>
+    </div>
+  </div>

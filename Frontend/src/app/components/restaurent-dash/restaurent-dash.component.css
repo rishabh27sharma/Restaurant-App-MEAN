@@ -1,0 +1,39 @@
+nav {
+    /* background-color: black; */
+    color: black;
+    border: 1px solid black;
+    box-shadow: 0  0 10px 10px rgba(0, 0, 0, 0.09);
+}
+
+.user {
+  border: 1px solid black;
+  background-color: blueviolet;
+  color: white;
+  margin: 10px;
+  padding: 3px;
+}
+
+span {
+  color: steelblue;
+}
+
+.container-fluid{
+  width: 90%;
+}
+
+.container{
+    width: 90%;
+    border: 1px solid blueviolet;
+    background-color: white;
+    box-shadow: 0 15px 20px rgba(0, 0, 0, 0.2);
+}
+
+h3{
+    text-align: center;
+    color: black;
+}
+
+.search {
+    width: 20%;
+    margin-top: 20px;
+}

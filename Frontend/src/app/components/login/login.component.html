@@ -1,0 +1,30 @@
+<div class="row" id="login-page">
+  <div class="col-md-6">
+    <div class="card">
+      <div class="text-center">
+        <h1>Restaurant Login</h1>
+        <h6>login here</h6>
+        <hr>
+      </div>
+      <form [formGroup]="loginForm" (ngSubmit)="login()">
+        <div class="mb-3">
+          <label for="email" class="form-label">Email address</label>
+          <input type="email" formControlName="email" class="form-control" id="email" placeholder="Enter Email" [ngClass]="{'is-invalid': submitted && loginForm.controls['email']['errors'] }">
+          <div *ngIf="submitted && loginForm.controls['email']['errors']" class="invalid-feedback">
+            <div *ngIf="loginForm.controls['email']['errors']['required']">Email is required!</div>
+          </div>
+        </div>
+        <div class="mb-3">
+          <label for="password" class="form-label">Password</label>
+          <input type="password" formControlName="password" class="form-control" id="password" placeholder="Enter Password" [ngClass]="{'is-invalid': submitted && loginForm.controls['password']['errors'] }">
+          <div *ngIf="submitted && loginForm.controls['password']['errors']" class="invalid-feedback">
+            <div *ngIf="loginForm.controls['password']['errors']['required']">Password is required!</div>
+          </div>
+        </div>
+        <button type="submit" class="btn btn-primary">Login</button>
+      </form>
+      <br />
+      <a routerLink='/signup'>New User? Click here to Sign Up!</a>
+    </div>
+  </div>
+</div>

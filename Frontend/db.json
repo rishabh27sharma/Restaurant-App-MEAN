@@ -1,0 +1,138 @@
+{
+  "restaurents": [
+    {
+      "id": 1,
+      "name": "Amul Magic",
+      "email": "amulmagic@gmail.com",
+      "mobile": "8764673789",
+      "address": "FC Road, Pune",
+      "services": "Ice-Creams, Kulfi"
+    },
+    {
+      "id": 2,
+      "name": "Butter Master",
+      "email": "buutermaster@gmail.com",
+      "mobile": 9057784838,
+      "address": "MG Road Camp, Pune",
+      "services": "Pav Bhaji, Dabeli"
+    },
+    {
+      "id": 3,
+      "name": "Punjabi Dhaba",
+      "email": "punjabidhaba@gmail.com",
+      "mobile": "9673526627",
+      "address": "Hinjewadi, Pune",
+      "services": "Food & Beverages"
+    },
+    {
+      "id": 4,
+      "name": "Rajhans",
+      "email": "rajhans@gmail.com",
+      "mobile": "8956737828",
+      "address": "AB Road, Julwania",
+      "services": "Food & Drinks"
+    },
+    {
+      "id": 5,
+      "name": "Sharma Sweets",
+      "email": "sweets@gmail.com",
+      "mobile": "9736671777",
+      "address": "Sendhwa",
+      "services": "Sweets & Chocolates"
+    },
+    {
+      "id": 6,
+      "name": "Penzo",
+      "email": "penzo@gmail.com",
+      "mobile": "9846673278",
+      "address": "Goa",
+      "services": "Bar"
+    },
+    {
+      "id": 7,
+      "name": "Snackso",
+      "email": "snacko@gmail.com",
+      "mobile": "7888382889",
+      "address": "Baner",
+      "services": "Samosa, Kachori"
+    },
+    {
+      "id": 8,
+      "name": "Raja Dhaba",
+      "email": "rdhabh@gmail.com",
+      "mobile": "8466673778",
+      "address": "Dhule",
+      "services": "Food and Restro"
+    },
+    {
+      "id": 9,
+      "name": "Tete-a-Tete",
+      "email": "teteatete@gmail.com",
+      "mobile": "8366727772",
+      "address": "USA",
+      "services": "GEMS Menu"
+    },
+    {
+      "id": 11,
+      "name": "Indori Sarafa",
+      "email": "indorisarafa@gmail.com",
+      "mobile": "9888939992",
+      "address": "Pune",
+      "services": "Poha Jalebi"
+    },
+    {
+      "id": 12,
+      "name": "Rock-n-Rolls",
+      "email": "rnr@gmail.com",
+      "mobile": "7778377783",
+      "address": "Katraj",
+      "services": "Rolls"
+    },
+    {
+      "id": 13,
+      "name": "Haldiram",
+      "email": "haldiram@gmail.com",
+      "mobile": "9588833828",
+      "address": "FC Road, Pune",
+      "services": "Raja Kachori, Bhujia"
+    },
+    {
+      "id": 14,
+      "name": "Punjabi Tadka",
+      "email": "ptadka@gmail.com",
+      "mobile": "8946373873",
+      "address": "Chandigarh",
+      "services": "Chole Bhature"
+    }
+  ],
+  "signup": [
+    {
+      "name": "Rishabh Sharma",
+      "email": "rishabh@gmail.com",
+      "mobile": "9475883828",
+      "password": "rishabh",
+      "id": 1
+    },
+    {
+      "name": "virat kohli",
+      "email": "virat@gmail.com",
+      "mobile": "1818181818",
+      "password": "virat",
+      "id": 2
+    },
+    {
+      "name": "Rohit",
+      "email": "rohit@gmail.com",
+      "mobile": "7777898999",
+      "password": "rohit",
+      "id": 3
+    },
+    {
+      "name": "Shree",
+      "email": "shree@gmail.com",
+      "mobile": "7777898999",
+      "password": "shree",
+      "id": 4
+    }
+  ]
+}
